@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/nav_station"
+        android:icon="@drawable/baseline_directions_bike_24"
+        android:title="Trạm xe" />
+    <item
+        android:id="@+id/nav_qr"
+        android:icon="@drawable/baseline_qr_code_scanner_24"
+        android:title="" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/baseline_insert_invitation_24"
+        android:title="Lịch sử" />
+    <item
+        android:id="@+id/nav_extend"
+        android:icon="@drawable/baseline_grid_view_24"
+        android:title="Mở rộng" />
+</menu>

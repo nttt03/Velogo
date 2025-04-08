@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Extend">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text=""
+            android:background="#1978BD"/>
+
+        <!-- Search -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_white_bg"
+            android:orientation="vertical"
+            android:layout_marginTop="-80dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:elevation="8dp"
+                    android:background="@drawable/custom_shape_round"
+                    app:srcCompat="@drawable/img_user"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thao Nguyen 03"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#FF5722"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:id="@+id/rowEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgEdit"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="16dp"
+                        app:srcCompat="@drawable/baseline_edit_24" />
+
+                    <TextView
+                        android:id="@+id/txtEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cập nhật thông tin"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#736F6F" />
+                <TableRow
+                    android:id="@+id/rowChangePass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgChangePass"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="16dp"
+                        app:srcCompat="@drawable/baseline_vpn_key_24" />
+
+                    <TextView
+                        android:id="@+id/txtChangePass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đổi mật khẩu"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#736F6F" />
+                <TableRow
+                    android:id="@+id/rowLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLogout"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="16dp"
+                        app:srcCompat="@drawable/baseline_logout_24" />
+
+                    <TextView
+                        android:id="@+id/txtLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đăng xuất"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+                </TableRow>
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="#736F6F" -->
+<!--                    android:layout_marginBottom="30dp"/>-->
+            </TableLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/color"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

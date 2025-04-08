@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BikeRental">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_keyboard_backspace_24"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/imgBicycle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_bike"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtBicycleID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtModelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Model: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtRentalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price per hour: "
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+            <TableRow>
+                <EditText
+                    android:id="@+id/edtStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btnStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày thuê "
+                    app:cornerRadius="8dp"
+                    android:layout_margin="3dp"
+                    android:backgroundTint="#B0B3B4"/>
+            </TableRow>
+
+            <!-- Chọn ngày trả -->
+            <TableRow>
+                <EditText
+                    android:id="@+id/edtEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+                <Button
+                    android:id="@+id/btnEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày trả"
+                    app:cornerRadius="8dp"
+                    android:layout_margin="3dp"
+                    android:backgroundTint="#B0B3B4"/>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnRental"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_round_bg"
+            android:text="Thuê xe"
+            android:textSize="20dp"
+            app:backgroundTint="@null"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
